@@ -1,6 +1,8 @@
 export const metadata = {
   title: "Rusty Operations | Admin Panel",
   description: "For Rusty Operations Staff",
+  siteName: "Rusty Operations Admin Panel",
+  url: "https://rusty-operations-admin-panel.web.app",
   authors: [
     {
       name: "Josh Helman",
@@ -9,7 +11,13 @@ export const metadata = {
     },
   ],
   creator: "Josh Helman",
-  image: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
+  images: [
+    {
+      url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
+      width: 800,
+      height: 600,
+    },
+  ],
   social: {
     twitter: "https://twitter.com/rustyoperations",
     discord: "https://discord.gg/2YH2e2Y",
@@ -18,6 +26,8 @@ export const metadata = {
   openGraph: {
     title: "Rusty Operations Admin Panel",
     description: "For Rusty Operations Staff",
+    siteName: "Rusty Operations Admin Panel",
+    url: "https://rusty-operations-admin-panel.web.app",
     images: [
       {
         url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
