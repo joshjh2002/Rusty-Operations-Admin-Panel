@@ -9,7 +9,7 @@ export const metadata = {
     },
   ],
   creator: "Josh Helman",
-  image: "img/rust-banner.jpg",
+  image: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
   social: {
     twitter: "https://twitter.com/rustyoperations",
     discord: "https://discord.gg/2YH2e2Y",
@@ -20,13 +20,16 @@ export const metadata = {
     description: "For Rusty Operations Staff",
     images: [
       {
-        url: "img/rust-banner.jpg",
+        url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
         width: 800,
         height: 600,
       },
     ],
     locale: "en-GB",
     type: "website",
+    icons: {
+      icon: "https://rusty-operations-admin-panel.web.app/favicon.ico",
+    },
   },
 };
 
