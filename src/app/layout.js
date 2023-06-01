@@ -28,6 +28,8 @@ export const metadata = {
     locale: "en-GB",
     type: "website",
     icons: {
+      rel: "icon",
+      type: "image/ico",
       icon: "https://rusty-operations-admin-panel.web.app/favicon.ico",
     },
   },
