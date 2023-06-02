@@ -9,6 +9,7 @@ import "../fonts.css";
 
 import Navbar from "../components/navbar.js";
 import SendAnnouncement from "../components/sendAnnouncements.js";
+import UpcomingWipe from "../components/upcomingWipe.js";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function Dashboard() {
   return (
     <div>
       <Navbar />
-      <SendAnnouncement />
+      <UpcomingWipe />
     </div>
   );
 }
