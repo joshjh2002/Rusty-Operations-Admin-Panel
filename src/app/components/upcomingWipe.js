@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import "../globals.css";
 
 export default function UpcomingWipe() {
-  const [forceWipe, setForceWipe] = useState();
-  const [midWipe, setMidWipe] = useState();
-  const [nextForceWipe, setNextForceWipe] = useState();
+  const [forceWipe, setForceWipe] = useState("");
+  const [midWipe, setMidWipe] = useState("");
+  const [nextForceWipe, setNextForceWipe] = useState("");
 
   useEffect(() => {
     // get the next force wipe
@@ -30,7 +30,7 @@ export default function UpcomingWipe() {
       (forceWipeDate.getTime() + nextForceWipeDate.getTime()) / 2
     );
     setMidWipe(middle);
-  });
+  }, []);
 
   return (
     <div className="w-3/4 block items-center justify-center text-center">
