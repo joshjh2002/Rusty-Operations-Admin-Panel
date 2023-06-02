@@ -41,30 +41,32 @@ export default function SendAnnouncement() {
   };
 
   return (
-    <div className="flex h-1/2">
-      <textarea
-        className="border-2 border-black rounded-md p-2 m-2 w-1/2 h-fill resize-none"
-        placeholder="Announcement"
-        onChange={handleAnnouncementChange}
-      />
-      <button
-        className="border-2 border-black rounded-md p-2 m-2"
-        onClick={messageDiscord}
-      >
-        Send to Discord
-      </button>
-      <button
-        className="border-2 border-black rounded-md p-2 m-2"
-        onClick={messageTwitter}
-      >
-        Send to Twitter
-      </button>
-      <button
-        className="border-2 border-black rounded-md p-2 m-2"
-        onClick={messageFacebook}
-      >
-        Send to Facebook
-      </button>
-    </div>
+    <section>
+      <div className="flex h-1/2">
+        <textarea
+          className="border-2 border-black rounded-md p-2 m-2 w-1/2 h-fill resize-none"
+          placeholder="Announcement"
+          onChange={handleAnnouncementChange}
+        />
+        <button
+          className="border-2 border-black rounded-md p-2 m-2"
+          onClick={messageDiscord}
+        >
+          Send to Discord
+        </button>
+        <button
+          className="border-2 border-black rounded-md p-2 m-2"
+          onClick={messageTwitter}
+        >
+          Send to Twitter
+        </button>
+        <button
+          className="border-2 border-black rounded-md p-2 m-2"
+          onClick={messageFacebook}
+        >
+          Send to Facebook
+        </button>
+      </div>
+    </section>
   );
 }

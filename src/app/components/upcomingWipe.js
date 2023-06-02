@@ -33,30 +33,34 @@ export default function UpcomingWipe() {
   }, []);
 
   return (
-    <div className="w-3/4 block items-center justify-center text-center">
-      <h1 className="rusty-font uppercase text-xl">Upcoming Wipes</h1>
-      <div className="grid grid-cols-3 gap-8 content-center">
-        <div>
-          <h2 className="rusty-font uppercase text-l">Current Force Wipe</h2>
-          <p className="rusty-font">
-            {forceWipe ? forceWipe.toLocaleDateString() : "Calculating..."}
-          </p>
-        </div>
-        <div>
-          <h2 className="rusty-font uppercase text-l">Mid Wipe</h2>
-          <p className="rusty-font">
-            {midWipe ? midWipe.toLocaleDateString() : "Calculating..."}
-          </p>
-        </div>
-        <div>
-          <h2 className="rusty-font uppercase text-l">Next Force Wipe</h2>
-          <p className="rusty-font">
-            {nextForceWipe
-              ? nextForceWipe.toLocaleDateString()
-              : "Calculating..."}
-          </p>
+    <section>
+      <div className="w-1/2 block items-center justify-center text-center border-2 rounded-md border-solid border-black">
+        <h1 className="rusty-font uppercase text-xl font-bold underline">
+          Upcoming Wipes
+        </h1>
+        <div className="grid grid-cols-3 content-center">
+          <div>
+            <h2 className="rusty-font uppercase text-l">Current Force Wipe</h2>
+            <p className="rusty-font">
+              {forceWipe ? forceWipe.toLocaleDateString() : "Calculating..."}
+            </p>
+          </div>
+          <div>
+            <h2 className="rusty-font uppercase text-l">Mid Wipe</h2>
+            <p className="rusty-font">
+              {midWipe ? midWipe.toLocaleDateString() : "Calculating..."}
+            </p>
+          </div>
+          <div>
+            <h2 className="rusty-font uppercase text-l">Next Force Wipe</h2>
+            <p className="rusty-font">
+              {nextForceWipe
+                ? nextForceWipe.toLocaleDateString()
+                : "Calculating..."}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

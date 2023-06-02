@@ -28,6 +28,7 @@ export default function Dashboard() {
     <div>
       <Navbar />
       <UpcomingWipe />
+      <SendAnnouncement />
     </div>
   );
 }
