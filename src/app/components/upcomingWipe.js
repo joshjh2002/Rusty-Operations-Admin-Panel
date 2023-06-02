@@ -9,47 +9,54 @@ export default function UpcomingWipe() {
 
   useEffect(() => {
     // get the next force wipe
-    let d = new Date();
-    d.setDate(1);
-    while (d.getDay() !== 4) {
-      d.setDate(d.getDate() + 1);
+    let forceWipeDate = new Date();
+    forceWipeDate.setDate(1);
+    while (forceWipeDate.getDay() !== 4) {
+      forceWipeDate.setDate(forceWipeDate.getDate() + 1);
     }
-    setForceWipe(d);
+    setForceWipe(forceWipeDate);
 
     // get the next force wipe
-    d.setDate(1);
-    d.setMonth(d.getMonth() + 1);
-    while (d.getDay() !== 4) {
-      d.setDate(d.getDate() + 1);
+    let nextForceWipeDate = new Date();
+    nextForceWipeDate.setDate(1);
+    nextForceWipeDate.setMonth(nextForceWipeDate.getMonth() + 1);
+    while (nextForceWipeDate.getDay() !== 4) {
+      nextForceWipeDate.setDate(nextForceWipeDate.getDate() + 1);
     }
-    setNextForceWipe(d);
+    setNextForceWipe(nextForceWipeDate);
 
     // get the middle of the wipe
-    let middle = new Date((forceWipe.getTime() + nextForceWipe.getTime()) / 2);
+    let middle = new Date(
+      (forceWipeDate.getTime() + nextForceWipeDate.getTime()) / 2
+    );
     setMidWipe(middle);
   });
 
   return (
-    <div className="flex h-1/2">
-      <h1>Upcoming Wipes</h1>
-      <ul>
-        <li>
-          <h2>Currect Force Wipe</h2>
-          <p>{forceWipe ? forceWipe.toLocaleDateString() : "Calculating..."}</p>
-        </li>
-        <li>
-          <h2>Mid Wipe</h2>
-          <p>{midWipe ? midWipe.toLocaleDateString() : "Calculating..."}</p>
-        </li>
-        <li>
-          <h2>Next Force Wipe</h2>
-          <p>
+    <div className="w-3/4 block items-center justify-center text-center">
+      <h1 className="rusty-font uppercase text-xl">Upcoming Wipes</h1>
+      <div className="grid grid-cols-3 gap-8 content-center">
+        <div>
+          <h2 className="rusty-font uppercase text-l">Current Force Wipe</h2>
+          <p className="rusty-font">
+            {forceWipe ? forceWipe.toLocaleDateString() : "Calculating..."}
+          </p>
+        </div>
+        <div>
+          <h2 className="rusty-font uppercase text-l">Mid Wipe</h2>
+          <p className="rusty-font">
+            {midWipe ? midWipe.toLocaleDateString() : "Calculating..."}
+          </p>
+        </div>
+        <div>
+          <h2 className="rusty-font uppercase text-l">Next Force Wipe</h2>
+          <p className="rusty-font">
             {nextForceWipe
               ? nextForceWipe.toLocaleDateString()
               : "Calculating..."}
           </p>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 }
