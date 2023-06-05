@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "Rusty Operations | Admin Panel",
-  description: "For Rusty Operations Staff",
-  siteName: "Rusty Operations Admin Panel",
-  url: "https://rusty-operations-admin-panel.web.app",
+  title: "Rusty Operations | Admin Panel", // Text shown in the tab
+  description: "For Rusty Operations Staff", // Meta description for SEO
+  siteName: "Rusty Operations Admin Panel", // Site name for SEO
+  url: "https://admin.rustyoperations.net", // Site URL
   authors: [
     {
       name: "Josh Helman",
@@ -24,20 +24,21 @@ export const metadata = {
     facebook: "https://www.facebook.com/Rusty-Operations",
   },
   openGraph: {
-    title: "Rusty Operations Admin Panel",
-    description: "For Rusty Operations Staff",
-    siteName: "Rusty Operations Admin Panel",
-    url: "https://rusty-operations-admin-panel.web.app",
+    title: "Rusty Operations | Admin Panel", // OG title
+    description: "For Rusty Operations Staff", // OG Description
+    siteName: "Rusty Operations Admin Panel", // OG Site name
+    url: "https://admin.rustyoperations.net", // OG URL
     images: [
       {
-        url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
+        url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg", // Image for sites to use
         width: 800,
         height: 600,
       },
     ],
-    locale: "en-GB",
-    type: "website",
+    locale: "en-GB", // Location data
+    type: "website", // Type of service
     icons: {
+      // Icon data
       rel: "icon",
       type: "image/ico",
       icon: "https://rusty-operations-admin-panel.web.app/favicon.ico",

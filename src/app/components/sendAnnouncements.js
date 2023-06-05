@@ -1,8 +1,17 @@
+// DEPENDENCIES //
 import { useState } from "react";
+
+// CSS //
+
 import "../globals.css";
 
 export default function SendAnnouncement() {
+  // STATES //
   const [announcement, setAnnouncement] = useState("");
+
+  // HANDLERS //
+
+  // Send announcement to Discord
   const messageDiscord = () => {
     const objectWithData = {
       embeds: [{ title: "Customer Announcements", description: announcement }],
@@ -19,6 +28,7 @@ export default function SendAnnouncement() {
     );
   };
 
+  // Send announcement to Twitter
   const messageTwitter = () => {
     window.open(
       "https://twitter.com/intent/tweet?text=" +
@@ -28,6 +38,7 @@ export default function SendAnnouncement() {
     );
   };
 
+  // Send announcement to Facebook
   const messageFacebook = () => {
     window.open(
       "https://www.facebook.com/groups/rustyoperations",
@@ -36,6 +47,7 @@ export default function SendAnnouncement() {
     );
   };
 
+  // Handle announcement input
   const handleAnnouncementChange = (e) => {
     setAnnouncement(e.target.value);
   };

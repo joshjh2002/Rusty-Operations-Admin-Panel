@@ -1,40 +1,57 @@
 "use client";
 
+// DEPENDENCIES //
+
 import React, { useState, useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebaseInit.js";
 import { useRouter } from "next/navigation";
 
+// CSS //
+
 import "./globals.css";
 import "./fonts.css";
 
 export default function Home() {
+  // DEPENDENCIES //
   const router = useRouter();
 
+  // STATES //
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // EFFECTS //
   useEffect(() => {
+    // Check if user is logged in
     auth.onAuthStateChanged((user) => {
       if (user) {
+        // User is signed in so redirect to dashboard
         router.push("/dashboard");
       }
     });
   }, [router, router.push]);
 
+  // HANDLERS //
+
+  // Handle email input
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
+  // Handle password input
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
+  // Handle sign in
   const handleSignin = () => {
+    // Sign in with email and password
     signInWithEmailAndPassword(auth, email, password)
+      // Redirect to dashboard
       .then(() => {
         router.push("/dashboard");
       })
+      // Catch error
       .catch((err) => alert(err.message));
   };
 

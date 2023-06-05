@@ -1,11 +1,20 @@
+// DEPENDENCIES //
+
 import { useState } from "react";
 import { useEffect } from "react";
+
+// CSS //
+
 import "../globals.css";
 
 export default function UpcomingWipe() {
+  // STATES //
+
   const [forceWipe, setForceWipe] = useState("");
   const [midWipe, setMidWipe] = useState("");
   const [nextForceWipe, setNextForceWipe] = useState("");
+
+  // EFFECTS //
 
   useEffect(() => {
     // get the next force wipe

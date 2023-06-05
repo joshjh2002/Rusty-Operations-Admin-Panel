@@ -1,14 +1,18 @@
+// DEPENDENCIES //
 import { auth } from "../firebaseInit.js";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
 import { db } from "../firebaseInit.js";
 import { ref, onValue } from "firebase/database";
 
 export default function Navbar() {
+  // DEPENDENCIES //
   const router = useRouter();
 
+  // EFFECTS //
+
+  // Check if user is logged in
   useEffect(() => {
     if (auth.currentUser) {
       const usernameRef = ref(db, `users/${auth.currentUser.uid}/username`);
@@ -18,11 +22,17 @@ export default function Navbar() {
     }
   }, []);
 
+  // HANDLERS //
+
+  // Handle sign out
   const handleSignout = () => {
+    // Sign out
     signOut(auth)
+      // Redirect to login page
       .then(() => {
         router.push("/");
       })
+      // Catch error
       .catch((err) => {
         alert(err.message);
       });
