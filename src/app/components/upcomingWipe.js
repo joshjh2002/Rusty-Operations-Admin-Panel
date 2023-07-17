@@ -42,7 +42,7 @@ export default function UpcomingWipe() {
   }, []);
 
   return (
-    <section className="m-4 w-1/2">
+    <section className="m-4">
       <div className="block items-center justify-center text-center border-2 rounded-md border-solid border-black">
         <h1 className="rusty-font uppercase text-xl font-bold underline">
           Upcoming Wipes

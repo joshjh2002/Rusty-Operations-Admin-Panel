@@ -53,24 +53,24 @@ export default function SendAnnouncement() {
   };
 
   return (
-    <section className="m-4 w-1/2">
+    <section className="m-4">
       <div className="grid grid-rows-2 content-center max-w-full w-full">
         <div>
           <textarea
-            className="w-full max-w-full border-2 border-black rounded-md p-2 h-fill resize-none"
+            className="w-full max-w-full border-2 border-black rounded-md p-2 h-fill"
             placeholder="Announcement"
             onChange={handleAnnouncementChange}
           />
         </div>
-        <div className="grid grid-cols-3 content-center gap-4">
+        <div className="grid grid-cols-3 content-center gap-4 h-fit">
           <button
-            className="border-2 border-black rounded-md p-2 "
+            className="border-2 border-black rounded-md p-2"
             onClick={messageDiscord}
           >
             Send to Discord
           </button>
           <button
-            className="border-2 border-black rounded-md p-2 "
+            className="border-2 border-black rounded-md p-2"
             onClick={messageTwitter}
           >
             Send to Twitter
