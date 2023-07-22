@@ -36,8 +36,8 @@ export default function Dashboard() {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center">
-        <div className="block w-3/4">
+      <div className="flex justify-center h-min">
+        <div className="block w-3/4 h-min">
           <UpcomingWipe />
           <SendAnnouncement />
         </div>

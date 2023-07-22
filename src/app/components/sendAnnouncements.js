@@ -53,11 +53,11 @@ export default function SendAnnouncement() {
   };
 
   return (
-    <section className="m-4">
+    <section className="m-4 h-min">
       <div className="grid grid-rows-2 content-center max-w-full w-full">
         <div>
           <textarea
-            className="w-full max-w-full border-2 border-black rounded-md p-2 h-fill"
+            className="w-full max-w-full border-2 border-black rounded-md p-2"
             placeholder="Announcement"
             onChange={handleAnnouncementChange}
           />
