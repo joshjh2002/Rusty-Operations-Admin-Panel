@@ -161,6 +161,18 @@ function Article(articles, type) {
           type="text"
           defaultValue={article.timestamp}
         ></input>
+        <button
+          className="border-2 border-black rounded-md p-2 mt-2"
+          onClick={() => {
+            article.timestamp = new Date().toISOString();
+            set(
+              ref(db, type + "/" + article.id + "/timestamp"),
+              article.timestamp
+            );
+          }}
+        >
+          Set Timestamp To Now
+        </button>
       </div>
       <button
         className="border-2 border-black rounded-md p-2 m-4"
@@ -168,6 +180,7 @@ function Article(articles, type) {
       >
         Delete
       </button>
+      <p>{}</p>
     </div>
   ));
 }
