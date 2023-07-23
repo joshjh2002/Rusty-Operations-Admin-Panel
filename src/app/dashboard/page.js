@@ -6,14 +6,11 @@ import React, { useEffect, useState } from "react";
 import { auth, db } from "../firebaseInit.js";
 import { useRouter } from "next/navigation";
 
-// CSS //
-import "../globals.css";
-import "../fonts.css";
-
 // COMPONENTS //
 import Navbar from "../components/navbar.js";
 import SendAnnouncement from "../components/sendAnnouncements.js";
 import UpcomingWipe from "../components/upcomingWipe.js";
+import Articles from "../components/articles.js";
 
 export default function Dashboard() {
   // DEPENDENCIES //
@@ -37,9 +34,10 @@ export default function Dashboard() {
     <div>
       <Navbar />
       <div className="flex justify-center h-min">
-        <div className="block w-3/4 h-min">
+        <div className="block w-[1200px] h-min">
           <UpcomingWipe />
           <SendAnnouncement />
+          <Articles />
         </div>
       </div>
     </div>

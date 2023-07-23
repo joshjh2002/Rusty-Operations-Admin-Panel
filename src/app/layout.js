@@ -1,3 +1,7 @@
+// CSS //
+import "./globals.css";
+import "./fonts.css";
+
 export const metadata = {
   title: "Rusty Operations | Admin Panel", // Text shown in the tab
   description: "For Rusty Operations Staff", // Meta description for SEO

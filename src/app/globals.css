@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --rust-accent: #ff9500;
+}
+
 .rusty-font {
   font-family: "Roboto Slab", serif;
 }
