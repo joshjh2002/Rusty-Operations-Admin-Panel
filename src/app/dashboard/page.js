@@ -11,6 +11,7 @@ import Navbar from "../components/navbar.js";
 import SendAnnouncement from "../components/sendAnnouncements.js";
 import UpcomingWipe from "../components/upcomingWipe.js";
 import Articles from "../components/articles.js";
+import ServiceAlerts from "../components/service-alerts.js";
 
 export default function Dashboard() {
   // DEPENDENCIES //
@@ -37,6 +38,7 @@ export default function Dashboard() {
         <div className="block w-[1200px] h-min">
           <UpcomingWipe />
           <SendAnnouncement />
+          <ServiceAlerts />
           <Articles />
         </div>
       </div>

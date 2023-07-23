@@ -1,10 +1,9 @@
 // DEPENDENCIES //
-import { auth } from "../firebaseInit.js";
 import { useEffect, useState } from "react";
 import { db } from "../firebaseInit.js";
 import { ref, onValue, set, remove } from "firebase/database";
 
-export default function Articles() {
+export default function ServiceAlerts() {
   const [type, setType] = useState("news");
   const [articles, setArticles] = useState([]);
 
@@ -42,7 +41,10 @@ export default function Articles() {
   };
 
   return (
-    <section className="m-4" id="articles">
+    <section
+      className="m-4 mt-12 p-4 border-2 border-black rounded-md"
+      id="articles"
+    >
       <div className="grid grid-cols-2 gap-4">
         <button
           className={`border-2 border-${
