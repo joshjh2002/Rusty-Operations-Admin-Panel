@@ -47,16 +47,16 @@ export default function ServiceAlerts() {
     >
       <div className="grid grid-cols-2 gap-4">
         <button
-          className={`border-2 border-${
-            type == "news" ? "[var(--rust-accent)]" : "black"
+          className={`border-2 border-black ${
+            type == "news" ? "bg-black text-white" : ""
           } rounded-md p-2 `}
           onClick={() => setType("news")}
         >
           News
         </button>
         <button
-          className={`border-2 border-${
-            type == "forums" ? "[var(--rust-accent)]" : "black"
+          className={`border-2 border-black ${
+            type == "forums" ? "bg-black text-white" : ""
           } rounded-md p-2 `}
           onClick={() => setType("forums")}
         >
