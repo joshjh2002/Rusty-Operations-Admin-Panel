@@ -69,6 +69,15 @@ export default function Articles() {
           />
         </div>
         <button
+          className="border-2 border-black rounded-md p-2 mt-2"
+          onClick={() => {
+            service.timestamp = new Date().toISOString();
+            set(ref(db, "/service/timestamp"), service.timestamp);
+          }}
+        >
+          Set Timestamp To Now
+        </button>
+        <button
           className="border-2 border-black rounded-md p-2"
           onClick={writeService}
         >
