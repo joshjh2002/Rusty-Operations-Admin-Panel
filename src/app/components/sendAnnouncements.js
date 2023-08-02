@@ -14,6 +14,7 @@ export default function SendAnnouncement() {
   // Send announcement to Discord
   const messageDiscord = () => {
     const objectWithData = {
+      content: "@everyone",
       embeds: [
         {
           title: "Customer Announcements",
