@@ -14,7 +14,19 @@ export default function SendAnnouncement() {
   // Send announcement to Discord
   const messageDiscord = () => {
     const objectWithData = {
-      embeds: [{ title: "Customer Announcements", description: announcement }],
+      embeds: [
+        {
+          title: "Customer Announcements",
+          description: announcement,
+          color: 13724201,
+          author: {
+            name: "Rusty Operations",
+            url: "https://www.rustyoperations.net",
+            icon_url: "https://www.rustyoperations.net/img/rust-logo.jpg",
+          },
+          timestamp: new Date().toISOString(),
+        },
+      ],
     };
     fetch(
       "https://discord.com/api/webhooks/1111765318717673492/sYN6l8EzDsn0jSexNOvejrqn9ee5OrLaHqrcOcM4Tjr8XMfcG72jVq14EsU5mRkkNm28",
