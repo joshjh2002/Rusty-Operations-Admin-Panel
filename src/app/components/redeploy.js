@@ -41,6 +41,14 @@ export default function Redeploy() {
     setMidWipe(middle);
   }, []);
 
+  let redeploy = () => {
+    window.open(
+      "https://api.vercel.com/v1/integrations/deploy/prj_WOSkXXB36vhZlryz8Tqej7Rms9ZH/FOxlrd9lKb",
+      "_blank",
+      "noreferrer"
+    );
+  };
+
   return (
     <section className="m-4">
       <div className="block items-center justify-center text-center border-2 rounded-md border-solid border-black">
@@ -54,11 +62,7 @@ export default function Redeploy() {
         </p>
         <button
           className="border-2 border-black rounded-md p-2 m-2"
-          onClick={window.open(
-            "https://api.vercel.com/v1/integrations/deploy/prj_WOSkXXB36vhZlryz8Tqej7Rms9ZH/FOxlrd9lKb",
-            "_blank",
-            "noreferrer"
-          )}
+          onClick={redeploy}
         >
           Redeploy Website
         </button>
