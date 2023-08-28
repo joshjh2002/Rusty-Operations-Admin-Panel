@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 import "../globals.css";
 
-export default function UpcomingWipe() {
+export default function Redeploy() {
   // STATES //
 
   const [forceWipe, setForceWipe] = useState("");
@@ -45,30 +45,23 @@ export default function UpcomingWipe() {
     <section className="m-4">
       <div className="block items-center justify-center text-center border-2 rounded-md border-solid border-black">
         <h1 className="rusty-font uppercase text-xl font-bold underline">
-          Upcoming Wipes
+          Redeploy Website
         </h1>
-        <div className="grid grid-cols-3 content-center">
-          <div>
-            <h2 className="rusty-font uppercase text-l">Current Force Wipe</h2>
-            <p className="rusty-font">
-              {forceWipe ? forceWipe.toLocaleDateString() : "Calculating..."}
-            </p>
-          </div>
-          <div>
-            <h2 className="rusty-font uppercase text-l">Mid Wipe</h2>
-            <p className="rusty-font">
-              {midWipe ? midWipe.toLocaleDateString() : "Calculating..."}
-            </p>
-          </div>
-          <div>
-            <h2 className="rusty-font uppercase text-l">Next Force Wipe</h2>
-            <p className="rusty-font">
-              {nextForceWipe
-                ? nextForceWipe.toLocaleDateString()
-                : "Calculating..."}
-            </p>
-          </div>
-        </div>
+        <p>
+          Use this option to redeploy the website. This should be done to force
+          update the websites metadata as it is build on each deployment to
+          ensure that metadata can be generated properly.
+        </p>
+        <button
+          className="border-2 border-black rounded-md p-2 m-2"
+          onClick={window.open(
+            "https://api.vercel.com/v1/integrations/deploy/prj_WOSkXXB36vhZlryz8Tqej7Rms9ZH/FOxlrd9lKb",
+            "_blank",
+            "noreferrer"
+          )}
+        >
+          Redeploy Website
+        </button>
       </div>
     </section>
   );
