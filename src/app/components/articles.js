@@ -26,16 +26,12 @@ export default function ServiceAlerts() {
 
   const newArticle = () => {
     articles.push({
-      id: articles.length,
-      title: "",
-      description: "",
-      image: "",
-      alt: "",
       file: "",
-      timestamp: "",
+      id: articles.length,
     });
 
     articles.forEach((article) => {
+      console.log(article.id, article);
       set(ref(db, type + "/" + article.id), article);
     });
   };
@@ -85,65 +81,17 @@ export default function ServiceAlerts() {
 function Article(articles, type) {
   const inputStyle = "w-[100%] border border-black rounded-md p-2";
 
-  if (articles == null) return;
+  if (!articles) return;
 
   return articles.map((article) => (
     <div
       className="mt-4 border-2 border-black rounded-md p-2"
-      key={`${article.id}`}
+      key={`${article.file}-div`}
     >
       <div>
-        <label>Title: </label>
+        <label>File </label>
         <input
-          key={article.title}
-          className={inputStyle}
-          onChange={(e) => {
-            article.title = e.target.value;
-          }}
-          type="text"
-          defaultValue={article.title}
-        ></input>
-      </div>
-      <div>
-        <label>Description: </label>
-        <input
-          key={article.description}
-          className={inputStyle}
-          onChange={(e) => {
-            article.description = e.target.value;
-          }}
-          type="text"
-          defaultValue={article.description}
-        ></input>
-      </div>
-      <div>
-        <label>Image URL: </label>
-        <input
-          key={article.image}
-          className={inputStyle}
-          onChange={(e) => {
-            article.image = e.target.value;
-          }}
-          type="text"
-          defaultValue={article.image}
-        ></input>
-      </div>
-      <div>
-        <label>Image Alt Text: </label>
-        <input
-          key={article.alt}
-          className={inputStyle}
-          onChange={(e) => {
-            article.alt = e.target.value;
-          }}
-          type="text"
-          defaultValue={article.alt}
-        ></input>
-      </div>
-      <div>
-        <label>File URL: </label>
-        <input
-          key={article.file}
+          key={`${article.file}-input`}
           className={inputStyle}
           onChange={(e) => {
             article.file = e.target.value;
@@ -152,33 +100,10 @@ function Article(articles, type) {
           defaultValue={article.file}
         ></input>
       </div>
-      <div>
-        <label>Timestamp: </label>
-        <input
-          key={article.timestamp}
-          className={inputStyle}
-          onChange={(e) => {
-            article.timestamp = e.target.value;
-          }}
-          type="text"
-          defaultValue={article.timestamp}
-        ></input>
-        <button
-          className="border-2 border-black rounded-md p-2 mt-2"
-          onClick={() => {
-            article.timestamp = new Date().toISOString();
-            set(
-              ref(db, type + "/" + article.id + "/timestamp"),
-              article.timestamp
-            );
-          }}
-        >
-          Set Timestamp To Now
-        </button>
-      </div>
       <button
         className="border-2 border-black rounded-md p-2 m-4"
         onClick={() => remove(ref(db, type + "/" + article.id))}
+        key={`${article.file}-button`}
       >
         Delete
       </button>

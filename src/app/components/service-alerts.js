@@ -33,34 +33,7 @@ export default function Articles() {
       <h2 className="text-xl">Service Alerts</h2>
       <div className="grid grid-cols-1 gap-2">
         <div className="grid grid-cols-1">
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            defaultValue={service.title}
-            className={inputStyle}
-            onChange={(e) => (service.title = e.target.value)}
-          />
-        </div>
-        <div className="grid grid-cols-1">
-          <label htmlFor="title">Description</label>
-          <input
-            type="text"
-            defaultValue={service.description}
-            className={inputStyle}
-            onChange={(e) => (service.description = e.target.value)}
-          />
-        </div>
-        <div className="grid grid-cols-1">
-          <label htmlFor="title">Timestamp</label>
-          <input
-            type="text"
-            defaultValue={service.timestamp}
-            className={inputStyle}
-            onChange={(e) => (service.timestamp = e.target.value)}
-          />
-        </div>
-        <div className="grid grid-cols-1">
-          <label htmlFor="title">File</label>
+          <label htmlFor="file">File</label>
           <input
             type="text"
             defaultValue={service.file}
@@ -68,15 +41,6 @@ export default function Articles() {
             onChange={(e) => (service.file = e.target.value)}
           />
         </div>
-        <button
-          className="border-2 border-black rounded-md p-2 mt-2"
-          onClick={() => {
-            service.timestamp = new Date().toISOString();
-            set(ref(db, "/service/timestamp"), service.timestamp);
-          }}
-        >
-          Set Timestamp To Now
-        </button>
         <button
           className="border-2 border-black rounded-md p-2"
           onClick={writeService}
