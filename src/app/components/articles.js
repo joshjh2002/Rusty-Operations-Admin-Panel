@@ -27,7 +27,7 @@ export default function ServiceAlerts() {
   const newArticle = () => {
     articles.push({
       file: "",
-      id: articles.length,
+      id: articles[articles.length],
     });
 
     articles.forEach((article) => {
