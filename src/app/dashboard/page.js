@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 // COMPONENTS //
 import Navbar from "../components/navbar.js";
 import SendAnnouncement from "../components/sendAnnouncements.js";
-import Redeploy from "../components/redeploy.js";
+import ClearCache from "../components/requestClearCache.js";
 import Articles from "../components/articles.js";
 import ServiceAlerts from "../components/service-alerts.js";
 
@@ -36,7 +36,7 @@ export default function Dashboard() {
       <Navbar />
       <div className="flex justify-center h-min">
         <div className="block w-[1200px] h-min">
-          <Redeploy />
+          <ClearCache />
           <SendAnnouncement />
           <ServiceAlerts />
           <Articles />

@@ -57,7 +57,7 @@ export default function Home() {
 
   return (
     <div className="h-screen flex items-center justify-center">
-      <div className="rusty-font shadow-lg p-5 w-1/3">
+      <div className="rusty-font shadow-lg p-5 w-[900px]">
         <h1 className="text-center text-2xl rusty-font-title">
           Rusty Operations Admin Panel
         </h1>
