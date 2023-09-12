@@ -27,11 +27,12 @@ export default function ServiceAlerts() {
   const newArticle = () => {
     articles.push({
       file: "",
-      id: articles[articles.length],
+      id: articles[articles.length - 1].id + 1,
     });
 
+    console.log(articles);
+
     articles.forEach((article) => {
-      console.log(article.id, article);
       set(ref(db, type + "/" + article.id), article);
     });
   };
