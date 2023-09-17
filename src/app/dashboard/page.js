@@ -12,6 +12,7 @@ import SendAnnouncement from "../components/sendAnnouncements.js";
 import ClearCache from "../components/requestClearCache.js";
 import Articles from "../components/articles.js";
 import ServiceAlerts from "../components/service-alerts.js";
+import PreviewArticle from "../components/previewArticle.js";
 
 export default function Dashboard() {
   // DEPENDENCIES //
@@ -37,6 +38,7 @@ export default function Dashboard() {
       <div className="flex justify-center h-min">
         <div className="block w-[1200px] h-min">
           <ClearCache />
+          <PreviewArticle />
           <SendAnnouncement />
           <ServiceAlerts />
           <Articles />
