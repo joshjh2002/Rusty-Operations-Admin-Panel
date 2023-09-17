@@ -1,0 +1,191 @@
+.article h1 {
+  margin-bottom: 1rem;
+}
+.article h2 {
+  margin-top: 1rem;
+}
+
+.article h3 {
+  font-size: large;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: left;
+  color: var(--rust-accent);
+  margin-top: 0.75rem;
+}
+
+.article {
+  padding: 1rem;
+  width: inherit;
+}
+
+.article p,
+.article a,
+.article li,
+.article th,
+.article td {
+  color: white;
+  font-size: medium;
+  font-weight: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.article p {
+  margin-top: 1rem;
+}
+
+.article ol {
+  list-style: normal;
+  font-size: medium;
+}
+
+.article ul {
+  list-style: disc;
+  font-size: medium;
+}
+
+.article ul > li,
+.article ol > li {
+  margin-left: 2rem;
+}
+
+.article a:link {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.article a:visited {
+  color: lightblue;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.article a:active {
+  text-decoration: underline;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+}
+
+.article blockquote > p,
+.article blockquote > blockquote {
+  font-size: medium;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  border-left: 4px solid var(--rust-accent);
+  padding-left: 1.5rem;
+}
+
+.article .table-width {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.article .table {
+  width: 100%;
+  min-width: 656px;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.article .scroll-bar {
+  /* width */
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 10px;
+  }
+}
+
+.article th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.article td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.article pre:has(code) {
+  display: block;
+  overflow-x: auto;
+  background-color: #f2f2f2;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: 1px solid #e2e2e2;
+  margin: 0.2rem;
+}
+
+.article code {
+  display: inline;
+  font-size: medium;
+  font-weight: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 95%;
+  }
+
+  .article ul > li,
+  .article ol > li {
+    margin-left: 1.5rem;
+  }
+
+  .article blockquote > p,
+  .article blockquote > blockquote {
+    padding-left: 1rem;
+  }
+
+  .article p,
+  .article a,
+  .article li,
+  .article code,
+  .article th,
+  .article td {
+    font-size: small !important;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+  .article h2 {
+    font-size: large;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .article h3 {
+    font-size: medium;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: left;
+  }
+}
