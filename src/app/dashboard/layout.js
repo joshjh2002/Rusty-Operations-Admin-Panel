@@ -1,9 +1,9 @@
 // CSS //
-import "./globals.css";
-import "./fonts.css";
+import "../globals.css";
+import "../fonts.css";
 
 export const metadata = {
-  title: "Rusty Operations | Admin Login", // Text shown in the tab
+  title: "Rusty Operations | Admin Dashboard", // Text shown in the tab
   description: "For Rusty Operations Staff", // Meta description for SEO
   siteName: "Rusty Operations Admin Panel", // Site name for SEO
   url: "https://admin.rustyoperations.net", // Site URL
@@ -28,7 +28,7 @@ export const metadata = {
     facebook: "https://www.facebook.com/Rusty-Operations",
   },
   openGraph: {
-    title: "Rusty Operations | Admin Login", // OG title
+    title: "Rusty Operations | Admin Dashboard", // OG title
     description: "For Rusty Operations Staff", // OG Description
     siteName: "Rusty Operations Admin Panel", // OG Site name
     url: "https://admin.rustyoperations.net", // OG URL
