@@ -1,6 +1,6 @@
 {
   "name": "admin-panel",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,7 @@
     "eslint-config-next": "latest",
     "firebase": "latest",
     "next": "latest",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "latest",
     "postcss": "latest",
     "react": "latest",
     "react-dom": "latest",
